@@ -20,12 +20,16 @@ public class negaraAdapter extends RecyclerView.Adapter<negaraAdapter.ViewHolder
     private List<negara> Countries;
     private Context context;
 
+    public negaraAdapter(List<negara> countries, Context context) {
+        this.Countries = countries;
+        this.context = context;
+    }
+
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_country,parent, false);
-
+        View view = LayoutInflater.from(context).inflate(R.layout.item_country,parent, false);
         return new ViewHolder(view);
     }
 
@@ -34,13 +38,13 @@ public class negaraAdapter extends RecyclerView.Adapter<negaraAdapter.ViewHolder
     negara negara = Countries.get(position);
     holder.tvname.setText(negara.getName());
     Glide.with(context)
-            .load(negara.getName())
+            .load(negara.getStrFlag())
             .into(holder.imgflag);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return Countries.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{

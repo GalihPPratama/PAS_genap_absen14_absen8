@@ -6,7 +6,7 @@
         android:title="La Liga" />
     <item
         android:id="@+id/nav_jadwal"
-        android:title="Jadwal" />
+        android:title="Countries" />
     <item
         android:id="@+id/nav_profile"
         android:title="Profile" />
