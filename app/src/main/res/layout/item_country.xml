@@ -8,18 +8,19 @@
         android:id="@+id/imgflag"
         android:layout_width="64dp"
         android:layout_height="64dp"
+        android:contentDescription="Team Badge"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvname"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="name"
+        android:paddingStart="8dp"
+        android:text="Team Name"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgflag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgflag"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintTop_toTopOf="@+id/imgflag" />
 </androidx.constraintlayout.widget.ConstraintLayout>
